@@ -1,0 +1,76 @@
+import "lib/github.com/diku-dk/sorts/radix_sort"
+import "raytracing/radixtree"
+import "prim"
+
+-- | Expands a 10-bit integer into 30 bits by inserting 2 zeros after
+-- each bit.
+def expand_bits (v: u32) : u32 =
+  let v = (v * 0x00010001) & 0xFF0000FF
+  let v = (v * 0x00000101) & 0x0F00F00F
+  let v = (v * 0x00000011) & 0xC30C30C3
+  let v = (v * 0x00000005) & 0x49249249
+  in v
+
+def morton_2D {x,y} : u32 =
+  let x = f32.min (f32.max(x * 1024) 0) 1023
+  let y = f32.min (f32.max(y * 1024) 0) 1023
+  let xx = expand_bits (u32.f32 x)
+  let yy = expand_bits (u32.f32 y)
+  in xx * 2 + yy
+
+type ptr = #leaf i32 | #inner i32
+
+type inner = {aabb: aabb, left:ptr, right:ptr, parent:i32}
+
+type~ bvh [n] 't = {L: [n]aabb, I: []inner}
+
+def bvh_mk [n] 't (ts: [n]aabb) : bvh [n] t =
+  let centers = map (aabb_center) ts
+  let x_max = f32.maximum (map (.x) centers)
+  let y_max = f32.maximum (map (.y) centers)
+  let x_min = f32.minimum (map (.x) centers)
+  let y_min = f32.minimum (map (.y) centers)
+  let normalize {x,y} = {x=(x-x_min)/(x_max-x_min),
+                           y=(y-y_min)/(y_max-y_min)}
+  let morton = aabb_center >-> normalize >-> morton_2D
+
+  let ts = radix_sort_by_key morton u32.num_bits u32.get_bit ts
+  let empty_aabb = {min = vec(0,0), max = vec(0,0)}
+  let empty_aabb {left, right, parent} = {aabb=empty_aabb, left, right, parent}
+  let inners = map empty_aabb (mk_radix_tree (map morton ts))
+  let depth = t32 (f32.log2 (f32.i64 n)) + 2
+  let get_aabb inners ptr =
+    match ptr
+    case #leaf i -> #[unsafe] ts[i]
+    case #inner i -> #[unsafe] inners[i].aabb
+  let update inners {aabb=_, left, right, parent} =
+    {aabb = surrounding_box (get_aabb inners left) (get_aabb inners right),
+     left,
+     right,
+     parent}
+  let inners = loop inners for _i < depth do
+               map (update inners) inners
+  in {L = ts, I = inners}
+
+def bvh_hit [n] 'a (contains: aabb -> bool) (t: bvh [n] a) : i32 =
+  (.0) <|
+  loop (acc, cur, prev) = (0, 0, #inner (-1))
+  while cur != -1 do
+  let node = #[unsafe] t.I[cur]
+  let from_left = prev == node.left
+  let from_right = prev == node.right
+  let rec_child : #rec ptr | #norec =
+    -- Did we return from left node?
+    if from_left
+    then #rec node.right
+    -- First encounter and in this BB?
+    else if !from_right && contains node.aabb
+    then #rec node.left
+    else #norec
+  in match rec_child
+     case #norec ->
+       (acc, node.parent, #inner cur)
+     case #rec ptr ->
+       match ptr
+       case #inner i -> (acc, i, #inner cur)
+       case #leaf _ -> (1, cur, ptr)
