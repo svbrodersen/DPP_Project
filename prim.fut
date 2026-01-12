@@ -24,7 +24,7 @@ def surrounding_box (box0: aabb) (box1: aabb) : aabb =
   in {min = small, max = big}
 
 def aabb_hit ({min, max}: aabb) (p: point) : bool =
-  if min.x <= p.x && min.y <= p.x && max.x >= p.x && max.y >= p.y then true else false
+  if min.x <= p.x && min.y <= p.y && max.x >= p.x && max.y >= p.y then true else false
 
 def aabb_center ({min, max}: aabb) =
   { x = min.x + (max.x - min.x)

@@ -73,4 +73,4 @@ def bvh_hit [n] 'a (contains: aabb -> bool) (t: bvh [n] a) : i32 =
      case #rec ptr ->
        match ptr
        case #inner i -> (acc, i, #inner cur)
-       case #leaf _ -> (1, cur, ptr)
+       case #leaf _ -> (acc + 1, cur, ptr)
