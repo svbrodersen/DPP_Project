@@ -9,7 +9,7 @@
 -- compiled input @ data/10000.in
 -- output { 11255843i64 }
 
-def rangeQuery2d [n] [m] (recs: [n][2]f64) (points: [m][2]f64) : i64 =
+def rangeQuery2dNaive [n] [m] (recs: [n][2]f64) (points: [m][2]f64) : i64 =
   let vals = map (\i -> 
                   let (x1, y1) = (recs[i][0], recs[i][1])
                   let (x2, y2) = (recs[i+1][0], recs[i+1][1])
@@ -27,6 +27,6 @@ entry main [n] (ps : [n][2]f64) : i64 =
   let split = 2 * (n // 3)
   let recs = ps[0:split]
   let points = ps[split:n]
-  in rangeQuery2d recs points
+  in rangeQuery2dNaive recs points
 
 

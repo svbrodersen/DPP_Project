@@ -1,3 +1,6 @@
 [submodule "pbbsbench"]
 	path = pbbsbench
 	url = https://github.com/cmuparlay/pbbsbench.git
+[submodule "raytracing"]
+	path = raytracing
+	url = https://github.com/athas/raytracingthenextweekinfuthark.git
