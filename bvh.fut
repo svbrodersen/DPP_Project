@@ -12,10 +12,10 @@ def expand_bits (v: u32) : u32 =
   in v
 
 def morton_2D {x,y} : u32 =
-  let x = f32.min (f32.max(x * 1024) 0) 1023
-  let y = f32.min (f32.max(y * 1024) 0) 1023
-  let xx = expand_bits (u32.f32 x)
-  let yy = expand_bits (u32.f32 y)
+  let x = f64.min (f64.max(x * 1024) 0) 1023
+  let y = f64.min (f64.max(y * 1024) 0) 1023
+  let xx = expand_bits (u32.f64 x)
+  let yy = expand_bits (u32.f64 y)
   in xx * 2 + yy
 
 type ptr = #leaf i32 | #inner i32
@@ -26,10 +26,10 @@ type~ bvh [n] 't = {L: [n]aabb, I: []inner}
 
 def bvh_mk [n] 't (ts: [n]aabb) : bvh [n] t =
   let centers = map (aabb_center) ts
-  let x_max = f32.maximum (map (.x) centers)
-  let y_max = f32.maximum (map (.y) centers)
-  let x_min = f32.minimum (map (.x) centers)
-  let y_min = f32.minimum (map (.y) centers)
+  let x_max = f64.maximum (map (.x) centers)
+  let y_max = f64.maximum (map (.y) centers)
+  let x_min = f64.minimum (map (.x) centers)
+  let y_min = f64.minimum (map (.y) centers)
   let normalize {x,y} = {x=(x-x_min)/(x_max-x_min),
                            y=(y-y_min)/(y_max-y_min)}
   let morton = aabb_center >-> normalize >-> morton_2D

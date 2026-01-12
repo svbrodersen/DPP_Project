@@ -1,5 +1,6 @@
 --
 -- ==
+-- entry: main
 -- compiled input @ data/10.in
 -- output { 23i64 }
 -- compiled input @ data/100.in

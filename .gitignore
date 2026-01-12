@@ -3,3 +3,6 @@
 rangeQuery2d
 rangeQuery2d.c
 lib/github.com
+bvh
+prim
+rangeQuery2dPerformant
