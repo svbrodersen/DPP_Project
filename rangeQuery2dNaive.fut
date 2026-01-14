@@ -85,6 +85,18 @@ entry main0 [n] (ps : [n][2]f64) : i64 =
 -- notest compiled input @ data/100000_1000000_1.0.in
 -- notest compiled input @ data/100000_10000000_0.0.in
 -- notest compiled input @ data/100000_10000000_1.0.in
+-- notest compiled input @ data/1000000_100_0.0.in
+-- notest compiled input @ data/1000000_100_1.0.in
+-- notest compiled input @ data/1000000_1000_0.0.in
+-- notest compiled input @ data/1000000_1000_1.0.in
+-- notest compiled input @ data/1000000_10000_0.0.in
+-- notest compiled input @ data/1000000_10000_1.0.in
+-- notest compiled input @ data/1000000_100000_0.0.in
+-- notest compiled input @ data/1000000_100000_1.0.in
+-- notest compiled input @ data/1000000_1000000_0.0.in
+-- notest compiled input @ data/1000000_1000000_1.0.in
+-- notest compiled input @ data/1000000_10000000_0.0.in
+-- notest compiled input @ data/1000000_10000000_1.0.in
 entry main2 (recs: [][2][2]f64) (points: [][2]f64) : i64 =
   let n = length recs
   let m = length points
