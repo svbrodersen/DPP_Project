@@ -51,24 +51,16 @@ entry main1 [n] (ps: [n][2]f64) : bvh [] =
 
 -- ==
 -- entry: main2
--- input {100000i64}
--- input {1000000i64} 
--- input {10000000i64}
--- input {100000000i64}
-entry main2 (n: i64) : i32 =
-  let ps =
-    tabulate_2d n 2 (\i _j ->
-                       if i >= 2 * (n // 3)
-                       then f64.i64 (n - i)
-                       else f64.i64 i)
-  let split = 2 * (n // 3)
-  let recs_split = ps[0:split]
-  let recs =
-    map (\i ->
-           let (x1, y1, x2, y2) = (recs_split[i][0], recs_split[i][1], recs_split[i + 1][0], recs_split[i + 1][1])
-           let p1 = (f64.min x1 x2, f64.min y1 y2)
-           let p2 = (f64.max x1 x2, f64.max y1 y2)
-           in {min = vec p1, max = vec p2})
-        (0..2...split - 1)
-  let points = (ps[split:n]) |> map (\a -> vec (a[0], a[1]))
+-- input { 100i64 100000i64}
+-- input { 100i64 1000000i64}
+-- input { 100i64 10000000i64}
+-- input { 100000i64 100i64 }
+-- input { 1000000i64 100i64 }
+-- input { 10000000i64 100i64 }
+-- input { 100000i64 100000i64 }
+-- input { 1000000i64 1000000i64 }
+-- input { 10000000i64 10000000i64 }
+
+entry main2 (n: i64) (m: i64) : i32 =
+  let (recs, points) = dummy_data n m
   in rangeQuery2dPerformant recs points
