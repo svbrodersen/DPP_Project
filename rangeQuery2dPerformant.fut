@@ -2,7 +2,6 @@ import "prim"
 import "bvh"
 
 --
--- ==
 -- entry: main
 -- nobench compiled input @ data/10.in
 -- output { 23i32 }
@@ -25,6 +24,19 @@ def rangeQuery2dPerformant [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
   let vals = map (\p -> bvh_hit (contains p) bvh) points
   in reduce (+) 0 (vals)
 
+entry main0 [n] (ps: [n][2]f64) : i32 =
+  let split = 2 * (n // 3)
+  let recs_split = ps[0:split]
+  let recs =
+    map (\i ->
+           let (x1, y1, x2, y2) = (recs_split[i][0], recs_split[i][1], recs_split[i + 1][0], recs_split[i + 1][1])
+           let p1 = (f64.min x1 x2, f64.min y1 y2)
+           let p2 = (f64.max x1 x2, f64.max y1 y2)
+           in {min = vec p1, max = vec p2})
+        (0..2...split - 1)
+  let points = (ps[split:n]) |> map (\a -> vec (a[0], a[1]))
+  in rangeQuery2dPerformant recs points
+
 entry main1 [n] (ps: [n][2]f64) : bvh [] =
   let split = 2 * (n // 3)
   let recs_split = ps[0:split]
@@ -37,7 +49,17 @@ entry main1 [n] (ps: [n][2]f64) : bvh [] =
         (0..2...split - 1)
   in build_tree recs
 
-entry main0 [n] (ps: [n][2]f64) : i32 =
+-- ==
+-- entry: main2
+-- input {100000i64 k}
+-- input {1000000i64 k}
+-- input {10000000i64 k}
+entry main2 (n: i64) : i32 =
+  let ps =
+    tabulate_2d n 2 (\i _j ->
+                       if i >= 2 * (n // 3)
+                       then f64.i64 (n - i)
+                       else f64.i64 i)
   let split = 2 * (n // 3)
   let recs_split = ps[0:split]
   let recs =
