@@ -37,15 +37,14 @@ entry main0 [n] (ps : [n][2]f64) : i64 =
 
 -- ==
 -- entry: main1
--- input { 100i64 100000i64}
--- input { 100i64 1000000i64}
--- input { 100i64 10000000i64}
--- input { 100000i64 100i64 }
--- input { 1000000i64 100i64 }
--- input { 10000000i64 100i64 }
+-- input { 1000i64 100000i64}
+-- input { 1000i64 1000000i64}
+-- input { 1000i64 10000000i64}
+-- input { 100000i64 1000i64 }
+-- input { 1000000i64 1000i64 }
+-- input { 10000000i64 1000i64 }
 -- input { 100000i64 100000i64 }
 -- input { 1000000i64 1000000i64 }
--- input { 10000000i64 10000000i64 }
 entry main1 (n: i64) (m: i64) : i64 = 
   let (recs, points) = dummy_data n m
   in rangeQuery2dNaive recs points
