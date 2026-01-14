@@ -57,12 +57,12 @@ def rangeQuery2dPerformant [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
 entry main [n] (ps: [n][2]f64) : i32 =
   let split = 2 * (n // 3)
   let recs_split = ps[0:split]
-  let recs =
+  let recs =trace (
     map (\i ->
-           let (x1, y1, x2, y2) = (recs_split[i][0], recs_split[i][1], recs_split[i + 1][0], recs_split[i][1])
+           let (x1, y1, x2, y2) = (recs_split[i][0], recs_split[i][1], recs_split[i + 1][0], recs_split[i+1][1])
            let p1 = (f64.min x1 x2, f64.min y1 y2)
            let p2 = (f64.max x1 x2, f64.max y1 y2)
            in {min = vec p1, max = vec p2})
-        (0..2...split - 1)
+        (0..2...split - 1))
   let points = (ps[split:n]) |> map (\a -> vec (a[0], a[1]))
   in rangeQuery2dPerformant recs points
