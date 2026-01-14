@@ -82,5 +82,5 @@ def bvh_hit [n] (contains: aabb -> bool) (t: bvh [n]) : i32 =
             match ptr
             case #inner i -> (acc, i, #inner cur)
             case #leaf i ->
-              let new_acc = if contains t.L[i] then acc + 1 else acc
+              let new_acc = if contains (#[unsafe] t.L[i]) then acc + 1 else acc
               in (new_acc, cur, ptr)
