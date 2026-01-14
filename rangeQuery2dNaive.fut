@@ -36,16 +36,54 @@ entry main0 [n] (ps : [n][2]f64) : i64 =
   in rangeQuery2dNaive recs points
 
 -- ==
--- entry: main1
--- input { 1000i64 100000i64}
--- input { 1000i64 1000000i64}
--- input { 1000i64 10000000i64}
--- input { 100000i64 1000i64 }
--- input { 1000000i64 1000i64 }
--- input { 10000000i64 1000i64 }
--- input { 100000i64 100000i64 }
--- input { 1000000i64 1000000i64 }
-entry main1 (n: i64) (m: i64) : i64 = 
-  let (recs, points) = dummy_data n m
+-- entry: main2
+-- notest compiled input @ data/dataset_100_0.0.in
+-- notest compiled input @ data/dataset_100_0.1.in
+-- notest compiled input @ data/dataset_100_0.2.in
+-- notest compiled input @ data/dataset_100_0.3.in
+-- notest compiled input @ data/dataset_100_0.4.in
+-- notest compiled input @ data/dataset_100_0.5.in
+-- notest compiled input @ data/dataset_1000_0.0.in
+-- notest compiled input @ data/dataset_1000_0.1.in
+-- notest compiled input @ data/dataset_1000_0.2.in
+-- notest compiled input @ data/dataset_1000_0.3.in
+-- notest compiled input @ data/dataset_1000_0.4.in
+-- notest compiled input @ data/dataset_1000_0.5.in
+-- notest compiled input @ data/dataset_10000_0.0.in
+-- notest compiled input @ data/dataset_10000_0.1.in
+-- notest compiled input @ data/dataset_10000_0.2.in
+-- notest compiled input @ data/dataset_10000_0.3.in
+-- notest compiled input @ data/dataset_10000_0.4.in
+-- notest compiled input @ data/dataset_10000_0.5.in
+-- notest compiled input @ data/dataset_100000_0.0.in
+-- notest compiled input @ data/dataset_100000_0.1.in
+-- notest compiled input @ data/dataset_100000_0.2.in
+-- notest compiled input @ data/dataset_100000_0.3.in
+-- notest compiled input @ data/dataset_100000_0.4.in
+-- notest compiled input @ data/dataset_100000_0.5.in
+-- notest compiled input @ data/dataset_1000000_0.0.in
+-- notest compiled input @ data/dataset_1000000_0.1.in
+-- notest compiled input @ data/dataset_1000000_0.2.in
+-- notest compiled input @ data/dataset_1000000_0.3.in
+-- notest compiled input @ data/dataset_1000000_0.4.in
+-- notest compiled input @ data/dataset_1000000_0.5.in
+-- notest compiled input @ data/dataset_10000000_0.0.in
+-- notest compiled input @ data/dataset_10000000_0.1.in
+-- notest compiled input @ data/dataset_10000000_0.2.in
+-- notest compiled input @ data/dataset_10000000_0.3.in
+-- notest compiled input @ data/dataset_10000000_0.4.in
+-- notest compiled input @ data/dataset_10000000_0.5.in
+entry main2 n m (recs: [n][2][2]f64) (points: [m][2]f64) : i64 =
+  let recs = map (\i ->
+    let xl = recs[i][0][0]
+    let yl = recs[i][0][1]
+    let xu = recs[i][1][0]
+    let yu = recs[i][1][1]
+    in {min = vec(xl, yl), max = vec(xu, yu)}
+  ) (iota n)
+  let points = map (\i ->
+    let x = points[i][0]
+    let y = points[i][1]
+    in vec(x, y)
+  ) (iota m)
   in rangeQuery2dNaive recs points
-  

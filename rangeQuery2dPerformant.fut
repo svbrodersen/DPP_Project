@@ -51,33 +51,53 @@ entry main1 [n] (ps: [n][2]f64) : bvh [] =
 
 -- ==
 -- entry: main2
--- input { 100i64 100000i64 0f64 }
--- input { 100i64 1000000i64 0f64 }
--- input { 100i64 10000000i64 0f64 }
--- input { 100000i64 100i64 0f64 }
--- input { 1000000i64 100i64 0f64 }
--- input { 10000000i64 100i64 0f64 }
--- input { 100000i64 100000i64 0f64 }
--- input { 1000000i64 1000000i64 0f64 }
--- input { 10000000i64 10000000i64 0f64 }
--- input { 100i64 100000i64 0.2f64 }
--- input { 100i64 1000000i64 0.2f64 }
--- input { 100i64 10000000i64 0.2f64 }
--- input { 100000i64 100i64 0.2f64 }
--- input { 1000000i64 100i64 0.2f64 }
--- input { 10000000i64 100i64 0.2f64 }
--- input { 100000i64 100000i64 0.2f64 }
--- input { 1000000i64 1000000i64 0.2f64 }
--- input { 10000000i64 10000000i64 0.2f64 }
--- input { 100i64 100000i64 0.4f64 }
--- input { 100i64 1000000i64 0.4f64 }
--- input { 100i64 10000000i64 0.4f64 }
--- input { 100000i64 100i64 0.4f64 }
--- input { 1000000i64 100i64 0.4f64 }
--- input { 10000000i64 100i64 0.4f64 }
--- input { 100000i64 100000i64 0.4f64 }
--- input { 1000000i64 1000000i64 0.4f64 }
--- input { 10000000i64 10000000i64 0.4f64 }
-entry main2 (n: i64) (m: i64) (overlap: f64) : i32 =
-  let (recs, points) = dummy_data n m overlap
+-- notest compiled input @ data/dataset_100_0.0.in
+-- notest compiled input @ data/dataset_100_0.1.in
+-- notest compiled input @ data/dataset_100_0.2.in
+-- notest compiled input @ data/dataset_100_0.3.in
+-- notest compiled input @ data/dataset_100_0.4.in
+-- notest compiled input @ data/dataset_100_0.5.in
+-- notest compiled input @ data/dataset_1000_0.0.in
+-- notest compiled input @ data/dataset_1000_0.1.in
+-- notest compiled input @ data/dataset_1000_0.2.in
+-- notest compiled input @ data/dataset_1000_0.3.in
+-- notest compiled input @ data/dataset_1000_0.4.in
+-- notest compiled input @ data/dataset_1000_0.5.in
+-- notest compiled input @ data/dataset_10000_0.0.in
+-- notest compiled input @ data/dataset_10000_0.1.in
+-- notest compiled input @ data/dataset_10000_0.2.in
+-- notest compiled input @ data/dataset_10000_0.3.in
+-- notest compiled input @ data/dataset_10000_0.4.in
+-- notest compiled input @ data/dataset_10000_0.5.in
+-- notest compiled input @ data/dataset_100000_0.0.in
+-- notest compiled input @ data/dataset_100000_0.1.in
+-- notest compiled input @ data/dataset_100000_0.2.in
+-- notest compiled input @ data/dataset_100000_0.3.in
+-- notest compiled input @ data/dataset_100000_0.4.in
+-- notest compiled input @ data/dataset_100000_0.5.in
+-- notest compiled input @ data/dataset_1000000_0.0.in
+-- notest compiled input @ data/dataset_1000000_0.1.in
+-- notest compiled input @ data/dataset_1000000_0.2.in
+-- notest compiled input @ data/dataset_1000000_0.3.in
+-- notest compiled input @ data/dataset_1000000_0.4.in
+-- notest compiled input @ data/dataset_1000000_0.5.in
+-- notest compiled input @ data/dataset_10000000_0.0.in
+-- notest compiled input @ data/dataset_10000000_0.1.in
+-- notest compiled input @ data/dataset_10000000_0.2.in
+-- notest compiled input @ data/dataset_10000000_0.3.in
+-- notest compiled input @ data/dataset_10000000_0.4.in
+-- notest compiled input @ data/dataset_10000000_0.5.in
+entry main2 n m (recs: [n][2][2]f64) (points: [m][2]f64) : i32 =
+  let recs = map (\i ->
+    let xl = recs[i][0][0]
+    let yl = recs[i][0][1]
+    let xu = recs[i][1][0]
+    let yu = recs[i][1][1]
+    in {min = vec(xl, yl), max = vec(xu, yu)}
+  ) (iota n)
+  let points = map (\i ->
+    let x = points[i][0]
+    let y = points[i][1]
+    in vec(x, y)
+  ) (iota m)
   in rangeQuery2dPerformant recs points
