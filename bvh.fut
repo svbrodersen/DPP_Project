@@ -13,15 +13,14 @@ def expand_bits (v: u32) : u64 =
   in v
 
 def morton_2D {x, y} : u64 =
-  -- 1. Scale and clamp to 16-bit range (0 - 65535)
-  -- Assuming input x,y are normalized 0.0 to 1.0
+  -- Scale and clamp to 16-bit range (0 - 65535)
   let x_uint = u32.f64 (f64.min (f64.max (x * 65535.0) 0.0) 65535.0)
   let y_uint = u32.f64 (f64.min (f64.max (y * 65535.0) 0.0) 65535.0)
-  -- 2. Expand bits (put zeros between every bit)
+
   let xx = expand_bits x_uint
   let yy = expand_bits y_uint
-  -- 3. Interleave by shifting X and ORing with Y
-  -- This results in: x15 y15 x14 y14 ... x0 y0
+
+  -- Interleave the bits
   in (xx << 1) | yy
 
 type ptr = #leaf i32 | #inner i32
@@ -45,7 +44,7 @@ def bvh_mk [n] (ts: [n]aabb) : bvh [n] =
   let empty_aabb = {min = vec (0, 0), max = vec (0, 0)}
   let empty_aabb {left, right, parent} = {aabb = empty_aabb, left, right, parent}
   let inners = map empty_aabb (mk_radix_tree (map morton ts))
-  let depth = t32 (f32.log2 (f32.i64 n)) + 2
+  let depth = i32.f32 (f32.log2 (f32.i64 n)) + 2
   let get_aabb inners ptr =
     match ptr
     case #leaf i -> #[unsafe] ts[i]

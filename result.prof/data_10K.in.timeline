@@ -1,0 +1,1428 @@
+builtin#replicate_i32.replicate_19929
+Duration: 351.231995 μs
+Kernel builtin#replicate_i32.replicate_19929 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i32.replicate_19929
+Duration: 10.24 μs
+Kernel builtin#replicate_i32.replicate_19929 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i32.replicate_19929
+Duration: 8.192 μs
+Kernel builtin#replicate_i32.replicate_19929 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segred_nonseg_19092
+Duration: 33.792 μs
+Kernel main.segred_nonseg_19092 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8200
+
+builtin#replicate_f64.replicate_20034
+Duration: 9.216001 μs
+Kernel builtin#replicate_f64.replicate_20034 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#iota_i64.iota_i64_20054
+Duration: 11.264 μs
+Kernel builtin#iota_i64.iota_i64_20054 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i32.replicate_19929
+Duration: 11.264 μs
+Kernel builtin#replicate_i32.replicate_19929 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.gpuseq_20070
+Duration: 12.288 μs
+Kernel main.gpuseq_20070 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19119
+Duration: 11.264 μs
+Kernel main.segmap_19119 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 11.264 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 15.36 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 11.264 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 20.48 μs
+
+main.gpuseq_20361
+Duration: 11.264 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 18.432001 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 12.288 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 11.264 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 11.264 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 9.216001 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 11.264 μs
+
+main.gpuseq_20361
+Duration: 11.264 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 11.264 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 11.264 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 20.48 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 9.216001 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 9.216001 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 9.216001 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 11.264 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 14.336 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 20.48 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 7.168 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 14.336 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 11.264 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 15.36 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 9.216001 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 7.168 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 9.216001 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 15.36 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 20.48 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 16.384001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 9.216001 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 16.384001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 10.24 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 17.408001 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 10.24 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 10.24 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+builtin#replicate_i8.replicate_20103
+Duration: 9.216001 μs
+Kernel builtin#replicate_i8.replicate_20103 with
+  grid=(1,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segscan_19140
+Duration: 15.36 μs
+Kernel main.segscan_19140 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=8192
+
+copy_dev_to_dev
+Duration: 8.192 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.gpuseq_20361
+Duration: 11.264 μs
+Kernel main.gpuseq_20361 with
+  grid=(1,1,1)
+  block=(1,1,1)
+  shared memory=0
+
+main.segmap_19142
+Duration: 14.336 μs
+Kernel main.segmap_19142 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segmap_19184
+Duration: 10.24 μs
+Kernel main.segmap_19184 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segmap_19414
+Duration: 19.455999 μs
+Kernel main.segmap_19414 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 6.144 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 11.264 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 17.408001 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.segmap_19659
+Duration: 11.264 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+main.segmap_19659
+Duration: 11.264 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 16.384001 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+copy_dev_to_dev
+Duration: 10.24 μs
+
+copy_dev_to_dev
+Duration: 9.216001 μs
+
+main.segmap_19659
+Duration: 10.24 μs
+Kernel main.segmap_19659 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segmap_19697
+Duration: 9.216001 μs
+Kernel main.segmap_19697 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=0
+
+main.segred_nonseg_19713
+Duration: 5097.472168 μs
+Kernel main.segred_nonseg_19713 with
+  grid=(14,1,1)
+  block=(256,1,1)
+  shared memory=1032
+
+copy_scalar_from_dev
+Duration: 17.408001 μs
