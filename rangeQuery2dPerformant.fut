@@ -51,9 +51,10 @@ entry main1 [n] (ps: [n][2]f64) : bvh [] =
 
 -- ==
 -- entry: main2
--- input {100000i64 k}
--- input {1000000i64 k}
--- input {10000000i64 k}
+-- input {100000i64}
+-- input {1000000i64} 
+-- input {10000000i64}
+-- input {100000000i64}
 entry main2 (n: i64) : i32 =
   let ps =
     tabulate_2d n 2 (\i _j ->

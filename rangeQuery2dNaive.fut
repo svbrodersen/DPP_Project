@@ -25,10 +25,27 @@ def rangeQuery2dNaive [n] [m] (recs: [n][2]f64) (points: [m][2]f64) : i64 =
                   in (reduce (+) 0 vals)) (0..2...(n-1))
   in reduce (+) 0 vals
 
-entry main [n] (ps : [n][2]f64) : i64 =
+entry main0 [n] (ps : [n][2]f64) : i64 =
   let split = 2 * (n // 3)
   let recs = ps[0:split]
   let points = ps[split:n]
   in rangeQuery2dNaive recs points
 
 
+-- ==
+-- entry: main1
+-- input {100000i64}
+-- input {1000000i64} 
+-- input {10000000i64}
+-- input {100000000i64}
+entry main1 (n: i64) : i64 = 
+  let ps =
+    tabulate_2d n 2 (\i _j ->
+                       if i >= 2 * (n // 3)
+                       then f64.i64 (n - i)
+                       else f64.i64 i)
+  let split = 2 * (n // 3)
+  let recs = ps[0:split]
+  let points = (ps[split:n]) 
+  in rangeQuery2dNaive recs points
+  
