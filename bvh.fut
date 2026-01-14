@@ -16,7 +16,7 @@ def morton_2D {x,y} : u32 =
   let y = f64.min (f64.max(y * 1024) 0) 1023
   let xx = expand_bits (u32.f64 x)
   let yy = expand_bits (u32.f64 y)
-  in xx * 2 + yy
+  in xx * 4 + yy
 
 type ptr = #leaf i32 | #inner i32
 
@@ -73,4 +73,6 @@ def bvh_hit [n] 'a (contains: aabb -> bool) (t: bvh [n] a) : i32 =
      case #rec ptr ->
        match ptr
        case #inner i -> (acc, i, #inner cur)
-       case #leaf _ -> (acc + 1, cur, ptr)
+       case #leaf i -> 
+      let new_acc = if contains t.L[i] then acc + 1 else acc
+      in (new_acc, cur, ptr)
