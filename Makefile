@@ -20,6 +20,10 @@ datasets:
 		) \
 	)
 
+benchmark: 
+	futhark bench --backed=cuda rangeQuery2dPerformant.fut > performant.out
+	futhark bench --backed=cuda rangeQuery2dNaive.fut > naive.out
+
 futhark_comment:
 	@for n in $(NUM_RECS); do \
 		for m in $(NUM_POINTS); do \
@@ -28,3 +32,5 @@ futhark_comment:
 			done \
 		done \
 	done
+
+
