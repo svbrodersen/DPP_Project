@@ -22,9 +22,9 @@ type ptr = #leaf i32 | #inner i32
 
 type inner = {aabb: aabb, left:ptr, right:ptr, parent:i32}
 
-type~ bvh [n] 't = {L: [n]aabb, I: []inner}
+type~ bvh [n] = {L: [n]aabb, I: []inner}
 
-def bvh_mk [n] 't (ts: [n]aabb) : bvh [n] t =
+def bvh_mk [n] (ts: [n]aabb) : bvh [n] =
   let centers = map (aabb_center) ts
   let x_max = f64.maximum (map (.x) centers)
   let y_max = f64.maximum (map (.y) centers)
@@ -52,7 +52,7 @@ def bvh_mk [n] 't (ts: [n]aabb) : bvh [n] t =
                map (update inners) inners
   in {L = ts, I = inners}
 
-def bvh_hit [n] 'a (contains: aabb -> bool) (t: bvh [n] a) : i32 =
+def bvh_hit [n] (contains: aabb -> bool) (t: bvh [n]) : i32 =
   (.0) <|
   loop (acc, cur, prev) = (0, 0, #inner (-1))
   while cur != -1 do
