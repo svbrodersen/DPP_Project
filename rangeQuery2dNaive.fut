@@ -1,14 +1,15 @@
---
 -- ==
 -- entry: main
--- compiled input @ data/10.in
--- output { 23i64 }
--- compiled input @ data/100.in
--- output { 1208i64 }
--- compiled input @ data/1000.in
--- output { 123068i64 }
--- compiled input @ data/10000.in
--- output { 11255843i64 }
+-- nobench compiled input @ data/10.in
+-- output { 23i32 }
+-- nobench compiled input @ data/100.in
+-- output { 1208i32 }
+-- nobench compiled input @ data/1000.in
+-- output { 123068i32 }
+-- nobench compiled input @ data/10000.in
+-- output { 11255843i32 }
+-- notest compiled input @ data/1M.in
+-- notest compiled input @ data/10M.in
 
 def rangeQuery2dNaive [n] [m] (recs: [n][2]f64) (points: [m][2]f64) : i64 =
   let vals = map (\i -> 

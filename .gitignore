@@ -6,3 +6,7 @@ lib/github.com
 bvh
 prim
 rangeQuery2dPerformant
+data/10M.in
+data/1M.in
+10M.pbbs
+1M.pbbs
