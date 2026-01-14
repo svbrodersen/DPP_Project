@@ -15,7 +15,7 @@ datasets:
 	$(foreach n,$(NUM_RECS), \
 		$(foreach m,$(NUM_POINTS), \
 			$(foreach p,$(OVERLAP_PCT), \
-					echo "$(n) $(m) $(p)" | ./mk_datasets > data/dataset_$(n)_$(m)_$(p).in; \
+					echo "$(n) $(m) $(p)" | ./mk_datasets > data/$(n)_$(m)_$(p).in; \
 			) \
 		) \
 	)
