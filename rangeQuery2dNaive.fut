@@ -73,7 +73,8 @@ entry main0 [n] (ps : [n][2]f64) : i64 =
 -- notest compiled input @ data/dataset_10000000_0.3.in
 -- notest compiled input @ data/dataset_10000000_0.4.in
 -- notest compiled input @ data/dataset_10000000_0.5.in
-entry main2 n m (recs: [n][2][2]f64) (points: [m][2]f64) : i64 =
+entry main2 (recs: [][2][2]f64) (points: [][2]f64) : i64 =
+  let n = length recs
   let recs = map (\i ->
     let xl = recs[i][0][0]
     let yl = recs[i][0][1]
@@ -85,5 +86,5 @@ entry main2 n m (recs: [n][2][2]f64) (points: [m][2]f64) : i64 =
     let x = points[i][0]
     let y = points[i][1]
     in vec(x, y)
-  ) (iota m)
+  ) (iota n)
   in rangeQuery2dNaive recs points
