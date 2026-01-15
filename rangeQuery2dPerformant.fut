@@ -127,3 +127,14 @@ entry main2 (recs: [][2][2]f64) (points: [][2]f64) : i32 =
     in vec(x, y)
   ) (iota m)
   in rangeQuery2dPerformant recs points
+
+entry main3 (recs: [][2][2]f64) : bvh [] =
+  let n = length recs
+  let recs = map (\i ->
+    let xl = recs[i][0][0]
+    let yl = recs[i][0][1]
+    let xu = recs[i][1][0]
+    let yu = recs[i][1][1]
+    in {min = vec(xl, yl), max = vec(xu, yu)}
+  ) (iota n)
+  in build_tree recs
