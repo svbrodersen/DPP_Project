@@ -1,4 +1,8 @@
 import "prim"
+import "lib/github.com/diku-dk/cpprandom/random"
+
+module rng_engine = minstd_rand
+module rand_f64 = uniform_real_distribution f64 u32 rng_engine
 
 def dummy_data (n: i64) (m: i64) (overlap_pct: f64) : ([n]aabb, [m]point) =
   let seed = 2026

@@ -1,8 +1,4 @@
 import "lib/github.com/athas/vector/vspace"
-import "lib/github.com/diku-dk/cpprandom/random"
-
-module rng_engine = minstd_rand
-module rand_f64 = uniform_real_distribution f64 u32 rng_engine
 
 module vec2 = mk_vspace_2d f64
 type vec2 = vec2.vector
@@ -34,4 +30,3 @@ def aabb_center ({min, max}: aabb) =
   { x = min.x + (max.x - min.x) / 2
   , y = min.y + (max.y - min.y) / 2
   }
-

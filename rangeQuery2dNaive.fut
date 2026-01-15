@@ -19,7 +19,7 @@ def rangeQuery2dNaive [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
                   let vals = map (\j -> 
                     let (x, y) = (points[j].x, points[j].y)
                     in if (x >= xl) && (y >= yl) && (x <= xu) && (y <= yu) then 1 else 0) (iota m)
-                  in (reduce (+) 0 vals)) (0..2...(n-1))
+                  in (reduce (+) 0 vals)) (0...(n-1))
   in reduce (+) 0 vals
 
 entry main0 [n] (ps : [n][2]f64) : i32 =
