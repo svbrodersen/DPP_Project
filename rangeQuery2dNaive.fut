@@ -12,7 +12,7 @@ import "prim"
 -- notest compiled input @ data/1M.in
 -- notest compiled input @ data/10M.in
 
-def rangeQuery2dNaive [n] [m] (recs: [n]aabb) (points: [m]point) : i64 =
+def rangeQuery2dNaive [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
   let vals = map (\i -> 
                   let (xl, yl) = (recs[i].min.x, recs[i].min.y)
                   let (xu, yu) = (recs[i].max.x, recs[i].max.y)
@@ -22,7 +22,7 @@ def rangeQuery2dNaive [n] [m] (recs: [n]aabb) (points: [m]point) : i64 =
                   in (reduce (+) 0 vals)) (0..2...(n-1))
   in reduce (+) 0 vals
 
-entry main0 [n] (ps : [n][2]f64) : i64 =
+entry main0 [n] (ps : [n][2]f64) : i32 =
   let split = 2 * (n // 3)
   let recs_split = ps[0:split]
   let recs =
@@ -97,7 +97,7 @@ entry main0 [n] (ps : [n][2]f64) : i64 =
 -- notest compiled input @ data/1000000_10000000_0.0.in
 -- notest compiled input @ data/1000000_10000000_0.25.in
 -- notest compiled input @ data/1000000_10000000_0.5.in
-entry main2 (recs: [][2][2]f64) (points: [][2]f64) : i64 =
+entry main2 (recs: [][2][2]f64) (points: [][2]f64) : i32 =
   let n = length recs
   let m = length points
   let recs = map (\i ->
