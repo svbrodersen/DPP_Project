@@ -10,7 +10,10 @@ all: pbbs2fut fut2pbbs
 %: %.c
 	$(CC) -o $@ $(CFLAGS) $^
 
-datasets:
+mk_datasets: mk_datasets.fut
+	futhark cuda mk_datasets.fut
+
+datasets: mk_datasets
 	mkdir -p data
 	$(foreach n,$(NUM_RECS), \
 		$(foreach m,$(NUM_POINTS), \
