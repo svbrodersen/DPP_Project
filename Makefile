@@ -21,8 +21,9 @@ datasets:
 	)
 
 benchmark: 
-	futhark bench --backend=cuda rangeQuery2dPerformant.fut > performant.out
-	futhark bench --backend=cuda rangeQuery2dNaive.fut > naive.out
+	mkdir -p results
+	futhark bench --backend=cuda --json=results/performant.json rangeQuery2dPerformant.fut > performant.out
+	futhark bench --backend=cuda --json=results/naive.json rangeQuery2dNaive.fut > naive.out
 
 futhark_comment:
 	@for n in $(NUM_RECS); do \
