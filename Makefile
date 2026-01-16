@@ -5,7 +5,7 @@ NUM_RECS := 1000 10000 100000 1000000
 NUM_POINTS := 1000 10000 100000 1000000 10000000
 OVERLAP_PCT := 0.0 0.25 0.5 
 
-all: pbbs2fut fut2pbbs
+conversion: pbbs2fut fut2pbbs
 
 %: %.c
 	$(CC) -o $@ $(CFLAGS) $^
@@ -13,7 +13,7 @@ all: pbbs2fut fut2pbbs
 mk_datasets: mk_datasets.fut
 	futhark cuda mk_datasets.fut
 
-datasets: mk_datasets
+datasets: mk_datasets conversion
 	mkdir -p data
 	$(foreach n,$(NUM_RECS), \
 		$(foreach m,$(NUM_POINTS), \
@@ -22,6 +22,9 @@ datasets: mk_datasets
 			) \
 		) \
 	)
+	randPoints -d 2 -n 1000000 1M.pbbs
+	pbbs2fut < 1M.pbbs > data/1M.in
+
 
 benchmark: 
 	mkdir -p results
