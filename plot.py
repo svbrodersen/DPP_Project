@@ -4,6 +4,8 @@ Benchmark Runtime Plotter
 
 This script reads JSON benchmark files and creates plots showing mean running times
 for different configurations (number of rectangles, points, and grouping percentages).
+
+This script plots helps creating the plots and was generated with the help of AI
 """
 
 import json
