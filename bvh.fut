@@ -2,20 +2,20 @@ import "lib/github.com/diku-dk/sorts/radix_sort"
 import "radixtree"
 import "prim"
 
--- Spreads 32 bits into 64 bits with 1-bit gaps (0000abcd -> 0a0b0c0d)
+-- Spreads 32 bits into 64 bits with 1-bit gaps (leaving space for another 32-bit value)
 def expand_bits (v: u32) : u64 =
   let v = u64.u32 v
-  let v = (v | (v << 16)) & 0x00FF00FF
-  let v = (v | (v << 8)) & 0x00FF00FF
-  let v = (v | (v << 4)) & 0x0F0F0F0F
-  let v = (v | (v << 2)) & 0x33333333
-  let v = (v | (v << 1)) & 0x55555555
+  let v = (v | (v << 16)) & 0x0000FFFF0000FFFF
+  let v = (v | (v << 8))  & 0x00FF00FF00FF00FF
+  let v = (v | (v << 4))  & 0x0F0F0F0F0F0F0F0F
+  let v = (v | (v << 2))  & 0x3333333333333333
+  let v = (v | (v << 1))  & 0x5555555555555555
   in v
 
 def morton_2D {x, y} : u64 =
-  -- Scale and clamp to 16-bit range (0 - 65535)
-  let x_uint = u32.f64 (f64.min (f64.max (x * 65535.0) 0.0) 65535.0)
-  let y_uint = u32.f64 (f64.min (f64.max (y * 65535.0) 0.0) 65535.0)
+  -- Scale and clamp to 32-bit range (0 - 4294967295)
+  let x_uint = u32.f64 (f64.min (f64.max (x * 4294967295.0) 0.0) 4294967295.0)
+  let y_uint = u32.f64 (f64.min (f64.max (y * 4294967295.0) 0.0) 4294967295.0)
 
   let xx = expand_bits x_uint
   let yy = expand_bits y_uint
