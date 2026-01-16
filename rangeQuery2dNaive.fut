@@ -1,20 +1,24 @@
 import "prim"
 
 def rangeQuery2dNaive [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
-  let vals = map (\i -> 
-                  let (xl, yl) = (recs[i].min.x, recs[i].min.y)
-                  let (xu, yu) = (recs[i].max.x, recs[i].max.y)
-                  let vals = map (\j -> 
+  let vals =
+    map (\i ->
+           let (xl, yl) = (recs[i].min.x, recs[i].min.y)
+           let (xu, yu) = (recs[i].max.x, recs[i].max.y)
+           let vals =
+             map (\j ->
                     let (x, y) = (points[j].x, points[j].y)
-                    in if (x >= xl) && (y >= yl) && (x <= xu) && (y <= yu) then 1 else 0) (iota m)
-                  in (reduce (+) 0 vals)) (0...(n-1))
+                    in if (x >= xl) && (y >= yl) && (x <= xu) && (y <= yu) then 1 else 0)
+                 (iota m)
+           in (reduce (+) 0 vals))
+        (0...(n - 1))
   in reduce (+) 0 vals
 
 -- ==
 -- entry: pbbsNaive
 -- compiled input @ data/1M.in
 -- compiled input @ data/10M.in
-entry pbbsNaive [n] (ps : [n][2]f64) : i32 =
+entry pbbsNaive [n] (ps: [n][2]f64) : i32 =
   let split = 2 * (n // 3)
   let recs_split = ps[0:split]
   let recs =
@@ -92,16 +96,18 @@ entry pbbsNaive [n] (ps : [n][2]f64) : i32 =
 entry defaultNaive (recs: [][2][2]f64) (points: [][2]f64) : i32 =
   let n = length recs
   let m = length points
-  let recs = map (\i ->
-    let xl = recs[i][0][0]
-    let yl = recs[i][0][1]
-    let xu = recs[i][1][0]
-    let yu = recs[i][1][1]
-    in {min = vec(xl, yl), max = vec(xu, yu)}
-  ) (iota n)
-  let points = map (\i ->
-    let x = points[i][0]
-    let y = points[i][1]
-    in vec(x, y)
-  ) (iota m)
+  let recs =
+    map (\i ->
+           let xl = recs[i][0][0]
+           let yl = recs[i][0][1]
+           let xu = recs[i][1][0]
+           let yu = recs[i][1][1]
+           in {min = vec (xl, yl), max = vec (xu, yu)})
+        (iota n)
+  let points =
+    map (\i ->
+           let x = points[i][0]
+           let y = points[i][1]
+           in vec (x, y))
+        (iota m)
   in rangeQuery2dNaive recs points

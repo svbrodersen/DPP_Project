@@ -7,7 +7,6 @@ def rangeQuery2dPerformant [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
   let vals = map (\p -> bvh_hit (contains p) bvh) points
   in reduce (+) 0 (vals)
 
-
 -- ==
 -- entry: pbbsPerformant
 -- compiled input @ data/1M.in
@@ -90,16 +89,18 @@ entry pbbsPerformant [n] (ps: [n][2]f64) : i32 =
 entry defaultPerformant (recs: [][2][2]f64) (points: [][2]f64) : i32 =
   let n = length recs
   let m = length points
-  let recs = map (\i ->
-    let xl = recs[i][0][0]
-    let yl = recs[i][0][1]
-    let xu = recs[i][1][0]
-    let yu = recs[i][1][1]
-    in {min = vec(xl, yl), max = vec(xu, yu)}
-  ) (iota n)
-  let points = map (\i ->
-    let x = points[i][0]
-    let y = points[i][1]
-    in vec(x, y)
-  ) (iota m)
+  let recs =
+    map (\i ->
+           let xl = recs[i][0][0]
+           let yl = recs[i][0][1]
+           let xu = recs[i][1][0]
+           let yu = recs[i][1][1]
+           in {min = vec (xl, yl), max = vec (xu, yu)})
+        (iota n)
+  let points =
+    map (\i ->
+           let x = points[i][0]
+           let y = points[i][1]
+           in vec (x, y))
+        (iota m)
   in rangeQuery2dPerformant recs points
