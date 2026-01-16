@@ -17,7 +17,6 @@ def rangeQuery2dNaive [n] [m] (recs: [n]aabb) (points: [m]point) : i32 =
 -- ==
 -- entry: pbbsNaive
 -- compiled input @ data/1M.in
--- compiled input @ data/10M.in
 entry pbbsNaive [n] (ps: [n][2]f64) : i32 =
   let split = 2 * (n // 3)
   let recs_split = ps[0:split]
@@ -32,7 +31,7 @@ entry pbbsNaive [n] (ps: [n][2]f64) : i32 =
   in rangeQuery2dNaive recs points
 
 -- ==
--- entry: main2
+-- entry: defaultNaive
 -- notest compiled input @ data/1000_1000_0.0.in
 -- notest compiled input @ data/1000_1000_0.25.in
 -- notest compiled input @ data/1000_1000_0.5.in
