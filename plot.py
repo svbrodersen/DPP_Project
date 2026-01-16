@@ -87,8 +87,8 @@ def plot_runtime_by_points(data_dict, title="Runtime vs Number of Points", label
         ax.set_title(f'Grouping: {percent*100:.0f}%')
         ax.set_xlabel('Number of Points')
         ax.set_ylabel('Mean Runtime (microseconds)')
-        # ax.set_xscale('log')
-        # ax.set_yscale('log')
+        ax.set_xscale('log')
+        ax.set_yscale('log')
         ax.grid(True, alpha=0.3)
         
         # Get unique rectangle counts
@@ -134,8 +134,8 @@ def plot_runtime_by_rectangles(data_dict, title="Runtime vs Number of Rectangles
         ax.set_title(f'Grouping: {percent*100:.0f}%')
         ax.set_xlabel('Number of Rectangles')
         ax.set_ylabel('Mean Runtime (microseconds)')
-        # ax.set_xscale('log')
-        # ax.set_yscale('log')
+        ax.set_xscale('log')
+        ax.set_yscale('log')
         ax.grid(True, alpha=0.3)
         
         # Get unique point counts
@@ -175,8 +175,8 @@ def plot_comparison(data_dicts, labels, title="Runtime Comparison"):
         ax.set_title(f'Runtime vs Points (1000000 rects, {percent*100:.0f}% grouped)')
         ax.set_xlabel('Number of Points')
         ax.set_ylabel('Mean Runtime (μs)')
-        # ax.set_xscale('log')
-        # ax.set_yscale('log')
+        ax.set_xscale('log')
+        ax.set_yscale('log')
         ax.grid(True, alpha=0.3)
         
         for data_dict, label in zip(data_dicts, labels):
@@ -199,8 +199,8 @@ def plot_comparison(data_dicts, labels, title="Runtime Comparison"):
         ax.set_title(f'Runtime vs Rectangles (10000000 pts, {percent*100:.0f}% grouped)')
         ax.set_xlabel('Number of Rectangles')
         ax.set_ylabel('Mean Runtime (μs)')
-        # ax.set_xscale('log')
-        # ax.set_yscale('log')
+        ax.set_xscale('log')
+        ax.set_yscale('log')
         ax.grid(True, alpha=0.3)
         
         for data_dict, label in zip(data_dicts, labels):
