@@ -1,24 +1,27 @@
-# Ports of PBBS
+# rangeQuery2d implementation in Futhark
 
-The [Problem Based Benchmark
-Suite](https://github.com/cmuparlay/pbbsbench) is a collection of
-benchmarks, typically involving significant amounts of irregularity.
-The upstream implementations are all in multi-threaded C++, but they
-are of high quality, including careful descriptions of input and
-output data.
+The following is a rangeQuery2d implementation in Futhark, which makes use of
+BVH trees to find points inside rectangles.
 
-Upstream PBBS doesn't really standardise the workloads for
-benchmarking, but instead provides programs for generating input data
-of a given size in a variety of bespoke data formats.  For
-reproducibility, we prefer pinning the exact data used.  We still use
-the PBBS data generates to produce the workloads in the first place,
-using the programs [fut2pbbs.c](fut2pbbs) and [pbbs2fut.c](pbbs2fut)
-to translate between PBBS and Futhark data formats.
+## Synthetic data generation
 
-By happy coincidence, the timing method used by `futhark bench`
-closely matches that expected by PBBS: timing starts after the input
-is in memory, and before it is written to disk.  IO and low-level
-initialisation is not counted.  Note however that for the GPU
-backends, the input will be resident in *GPU memory*, meaning that
-transfer time to and from GPU is also not counted (except transfers
-that occur during the benchmark itself).
+To create the synthetic data used, one has to first create the mk\_datasets
+futhark, which can be done with '''make mk_datasets''' to generate one made for
+cuda backend. If wished to be run for another backend then this must be done
+manually. Afterwards, one can run datasets_synthetic to generate the synthetic
+data.
+
+The make '''futhark\_comment''' target creates a comment which can be used in
+the futhark main file to correctly target the new generated files.
+
+## PBBS data generation
+
+This assumes that the randPoints binary already has been compiled and placed
+within the src folder. Then datasets_pbbs can be run to create some random
+pbbs_data. 
+
+## Specifying sizes
+
+The Makefile allows you to specify different number of recs, points and overlap
+according to the accompanying report. Make sure to update this both before you
+run the futhark_comment and the data generation.
